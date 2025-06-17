@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    #bill {
+      width: 300px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #bill button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #bill button:first-of-type {
+      background-color: #ff4444;
+    }
+    #bill button:last-of-type {
+      background-color: #4CAF50;
+    }
+  </style>
+
+  <title>Youthfull Restaurant | Best Quality and Tasty Food</title>
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <div id="hero">
+    <div id="hero_content">
+      <h1>Youthfull Restaurant</h1>
+      <h2>Best Quality and Tasty Food Point</h2>
+      <a href="#menu">Menu</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <nav id="navbar">
+      <h1>Youthfull Restaurant</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#chef">Chef</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div id="phone"><a href="tel:+83081*****">+83081*****</a></div>
+    </nav>
+    <div id="mobile_menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#chef">Chef</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h1 id="section">Menu</h1>
+    <div id="menu_row">
+      <!-- Breakfast -->
+      <div id="menu_col">
+        <h2>Breakfast</h2>
+        <div class="box" data-name="Egg-Bread 01" data-price="50">
+          <div id="image"><img src="images/breakfast1.jpg" alt="Egg-Bread 01" /></div>
+          <div><h3>Egg-Bread 01</h3><h4>₹ 50</h4></div>
+        </div>
+        <div class="box" data-name="Puran-poli 02" data-price="100">
+          <div id="image"><img src="images/breakfast2.jpg" alt="Puran-poli 02" /></div>
+          <div><h3>Puran-poli 02</h3><h4>₹ 100</h4></div>
+        </div>
+        <div class="box" data-name="Chapati 03" data-price="150">
+          <div id="image"><img src="images/breakfast3.jpg" alt="Chapati 03" /></div>
+          <div><h3>Chapati 03</h3><h4>₹ 150</h4></div>
+        </div>
+      </div>
+
+      <!-- Lunch -->
+      <div id="menu_col">
+        <h2>Lunch</h2>
+        <div class="box" data-name="Biryani 01" data-price="50">
+          <div id="image"><img src="images/lunch1.jpg" alt="Biryani 01" /></div>
+          <div><h3>Biryani 01</h3><h4>₹ 50</h4></div>
+        </div>
+        <div class="box" data-name="Fish-fry 02" data-price="100">
+          <div id="image"><img src="images/lunch2.jpg" alt="Fish-fry 02" /></div>
+          <div><h3>Fish-fry 02</h3><h4>₹ 100</h4></div>
+        </div>
+        <div class="box" data-name="Full-thali 03" data-price="150">
+          <div id="image"><img src="images/lunch3.jpg" alt="Full-thali 03" /></div>
+          <div><h3>Full-thali 03</h3><h4>₹ 150</h4></div>
+        </div>
+      </div>
+
+      <!-- Dinner -->
+      <div id="menu_col">
+        <h2>Dinner</h2>
+        <div class="box" data-name="Leg-piece 01" data-price="50">
+          <div id="image"><img src="images/dinner1.jpg" alt="Leg-piece 01" /></div>
+          <div><h3>Leg-piece 01</h3><h4>₹ 50</h4></div>
+        </div>
+        <div class="box" data-name="Matton-curry 02" data-price="100">
+          <div id="image"><img src="images/dinner2.jpg" alt="Matton-curry 02" /></div>
+          <div><h3>Matton-curry 02</h3><h4>₹ 100</h4></div>
+        </div>
+        <div class="box" data-name="Chicken 03" data-price="150">
+          <div id="image"><img src="images/dinner3.jpg" alt="Chicken 03" /></div>
+          <div><h3>Chicken 03</h3><h4>₹ 150</h4></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bill Section -->
+  <div style="display: flex; justify-content: center; margin: 40px 0;">
+    <div id="bill">
+      <h2>Bill</h2>
+      <ul id="billItems" style="list-style: none; padding: 0;"></ul>
+      <h3>Total: ₹<span id="totalAmount">0</span></h3>
+      <button onclick="clearBill()">Clear Bill</button>
+      <button onclick="downloadBill()">Download Bill</button>
+    </div>
+  </div>
+
+  <!-- Chef Section -->
+  <section id="chef">
+    <h1 id="section">Chef</h1>
+    <div id="chef_row">
+      <div class="chef_col"><div id="img"><img src="images/1.png" alt="Chef 1" /></div><h4>Muddsar Qayyum</h4></div>
+      <div class="chef_col"><div id="img"><img src="images/2.png" alt="Chef 2" /></div><h4>Noal Blake</h4></div>
+      <div class="chef_col"><div id="img"><img src="images/3.png" alt="Chef 3" /></div><h4>Mason Reid</h4></div>
+      <div class="chef_col"><div id="img"><img src="images/4.png" alt="Chef 4" /></div><h4>Ryan Dale</h4></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h1 id="section">About</h1>
+    <div class="about_row">
+      <div class="about_col">
+        <h1>About Us</h1>
+        <p>Welcome to Youthfull Restaurant — where flavor meets freshness! We are passionate about serving delicious, high-quality meals made with love. Our mission is to create a youthful and vibrant dining experience. Come hungry, leave happy — that’s the Youthfull way!</p>
+      </div>
+      <div class="about_col">
+        <div id="about_img"><img src="images/about.png" alt="About Youthfull Restaurant" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><i class="fa fa-map-marker"></i> Wai-bazar, Youthfull Restaurant, Mahoor</p>
+        <p><i class="fa fa-envelope"></i> <a href="mailto:rathodshweta281@gmail.com">rathodshweta281@gmail.com</a></p>
+        <p><i class="fa fa-phone"></i> <a href="tel:+83081*****">+83081*****</a></p>
+        <h3>Follow Us</h3>
+        <p class="social-icons">
+          <a href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
+          <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+          <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+          <a href="#"><i class="fa fa-youtube-play fa-2x"></i></a>
+        </p>
+      </div>
+      <div class="contact-form">
+        <form id="contactForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..." required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email..." required />
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject..." required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+          <input type="submit" value="Send Message" />
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    const boxes = document.querySelectorAll('.box');
+    const billItems = document.getElementById('billItems');
+    const totalAmount = document.getElementById('totalAmount');
+    let total = 0;
+
+    boxes.forEach(box => {
+      box.addEventListener('click', () => {
+        const name = box.getAttribute('data-name');
+        const price = parseInt(box.getAttribute('data-price'));
+        if (!name || !price) return alert("Item is missing name or price!");
+
+        const item = document.createElement('li');
+        item.textContent = `${name} - ₹${price}`;
+        billItems.appendChild(item);
+        total += price;
+        totalAmount.textContent = total;
+      });
+    });
+
+    function clearBill() {
+      billItems.innerHTML = '';
+      total = 0;
+      totalAmount.textContent = total;
+    }
+
+    async function downloadBill() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.setFontSize(18);
+      doc.text("Restaurant Bill", 20, 20);
+      doc.setFontSize(12);
+      let y = 30;
+      const items = document.querySelectorAll('#billItems li');
+      if (!items.length) return alert("No items in bill to download.");
+      items.forEach((item, index) => {
+        doc.text(`${index + 1}. ${item.textContent}`, 20, y);
+        y += 10;
+      });
+      doc.setFontSize(14);
+      doc.text(`Total: ₹${totalAmount.textContent}`, 20, y + 10);
+      doc.save('bill.pdf');
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const subject = document.getElementById("subject").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!name || !email || !subject || !message) return alert("Please fill in all fields.");
+      if (!emailPattern.test(email)) return alert("Please enter a valid email address.");
+      alert("Message sent successfully!");
+      document.getElementById("contactForm").reset();
+    });
+  </script>
+</body>
+</html>
